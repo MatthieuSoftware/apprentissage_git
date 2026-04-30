@@ -1,14 +1,164 @@
-BONJOUR JE SUIS MATTHIEU JE SUIS INGENIEUR PAR LA GRASSE DE DIEU.
-
-
-
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-   <title></title>
-   <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <title>YouTube</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0f0f0f;
+            color: white;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #202020;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: red;
+        }
+
+        .search-bar input {
+            width: 400px;
+            padding: 8px;
+            border-radius: 20px;
+            border: none;
+        }
+
+        /* LAYOUT */
+        .container {
+            display: flex;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 200px;
+            background-color: #181818;
+            height: 100vh;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #383838;
+        }
+
+        /* VIDEOS */
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .videos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .video {
+            background-color: #202020;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .video:hover {
+            transform: scale(1.05);
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 150px;
+            background-color: #555;
+        }
+
+        .video-info {
+            padding: 10px;
+        }
+
+        .title {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .channel {
+            font-size: 12px;
+            color: gray;
+        }
+    </style>
 </head>
 <body>
-   <h1>Un super titre</h1>
+
+<header>
+    <div class="logo">YouTube</div>
+    <div class="search-bar">
+        <input type="text" placeholder="Rechercher">
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="sidebar">
+        <a href="#">Accueil</a>
+        <a href="#">Tendances</a>
+        <a href="#">Abonnements</a>
+        <a href="#">Bibliothèque</a>
+    </div>
+
+    <div class="content">
+        <div class="videos">
+
+            <div class="video">
+                <div class="thumbnail"></div>
+                <div class="video-info">
+                    <div class="title">Vidéo 1 incroyable</div>
+                    <div class="channel">Chaîne A</div>
+                </div>
+            </div>
+
+            <div class="video">
+                <div class="thumbnail"></div>
+                <div class="video-info">
+                    <div class="title">Vidéo 2 incroyable</div>
+                    <div class="channel">Chaîne B</div>
+                </div>
+            </div>
+
+            <div class="video">
+                <div class="thumbnail"></div>
+                <div class="video-info">
+                    <div class="title">Vidéo 3 incroyable</div>
+                    <div class="channel">Chaîne C</div>
+                </div>
+            </div>
+
+            <div class="video">
+                <div class="thumbnail"></div>
+                <div class="video-info">
+                    <div class="title">Vidéo 4 incroyable</div>
+                    <div class="channel">Chaîne D</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
 </body>
 </html>
